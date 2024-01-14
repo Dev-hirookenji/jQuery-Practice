@@ -19,20 +19,39 @@ $(document).ready(function () {
     console.log("animated");
   });
 
+  //!Form Ajax
+  // $("#output").load("sample.txt", function (response, statusTxt, xhr) {
+  //   if (statusTxt === "success") alert("Success!");
+  //   if (statusTxt === "error") alert("Error" + xhr.statusTxt);
+  // });
+  //!Ajax API call
+  $.get("https://jsonplaceholder.typicode.com/users", function (data, status) {
+    console.log(data, status);
+  });
+  $.post(
+    "https://jsonplaceholder.typicode.com/posts",
+    {
+      title: "This is title",
+      body: "this is body",
+    },
+    function (data, status) {
+      console.log(data, status);
+    }
+  );
   //!Form
-  $("input").focus(function () {
-    $(this).css("background-color", "skyblue");
-  });
-  $("input").blur(function () {
-    $(this).css("background-color", "");
-  });
-  $("input").change(function () {
-    console.log($(this).val());
-  });
-  $("#regform").submit(function (event) {
-    event.preventDefault();
-    console.log("submitted");
-  });
+  // $("input").focus(function () {
+  //   $(this).css("background-color", "skyblue");
+  // });
+  // $("input").blur(function () {
+  //   $(this).css("background-color", "");
+  // });
+  // $("input").change(function () {
+  //   console.log($(this).val());
+  // });
+  // $("#regform").submit(function (event) {
+  //   event.preventDefault();
+  //   console.log("submitted");
+  // });
 
   //!AJAX
 
