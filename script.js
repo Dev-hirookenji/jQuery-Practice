@@ -18,6 +18,24 @@ $(document).ready(function () {
     });
     console.log("animated");
   });
+
+  //!Form
+  $("input").focus(function () {
+    $(this).css("background-color", "skyblue");
+  });
+  $("input").blur(function () {
+    $(this).css("background-color", "");
+  });
+  $("input").change(function () {
+    console.log($(this).val());
+  });
+  $("#regform").submit(function (event) {
+    event.preventDefault();
+    console.log("submitted");
+  });
+
+  //!AJAX
+
   //!h and s keypressed hide and show
   // $("body").keydown(function (event) {
   //   if (event.which === 72) {
