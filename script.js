@@ -2,6 +2,8 @@ $(document).ready(function () {
   $(".btn_toggle").click(function () {
     $(".p1").toggle(function () {
       console.log("toggled");
+      let color = $("div.box").css("background-color");
+      $(".p1").css("color", color);
     });
   });
   $(".btn_fade").click(function () {
