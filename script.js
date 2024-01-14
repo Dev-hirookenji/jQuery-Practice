@@ -18,7 +18,14 @@ $(document).ready(function () {
     });
     console.log("animated");
   });
-
+  $(".hello").click(function () {
+    let color = $(".hello").css("backgroundColor", "blue");
+    $(".hello").css("textColor", color);
+  });
+  $(".hello").blur(function () {
+    let color = $(".hello").css("backgroundColor", "");
+    $(".hello").css("textColor", color);
+  });
   //!Form Ajax
   // $("#output").load("sample.txt", function (response, statusTxt, xhr) {
   //   if (statusTxt === "success") alert("Success!");
