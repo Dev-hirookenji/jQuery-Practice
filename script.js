@@ -45,6 +45,9 @@ $(document).ready(function () {
       console.log(data, status);
     }
   );
+  $(".hide_btn").click(function () {
+    $("img").fadeToggle("slow");
+  });
   //!Form
   // $("input").focus(function () {
   //   $(this).css("background-color", "skyblue");
